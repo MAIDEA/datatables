@@ -7,7 +7,7 @@
     "description": "A powerful toolkit for building datatable components",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/vincjo/datatables.git"
+        "url": "git+https://github.com/MAIDEA/datatables.git"
     },
     "author": "vincjo",
     "contributors": [

@@ -7,7 +7,7 @@ node_modules
 /build
 .env
 .env.*
-/dist
+#/dist # for quick testing
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*

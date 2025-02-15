@@ -30,7 +30,7 @@ export default class ViewBuilder<Row>
         }
         clearInterval(this.interval)
 
-        this.columns = columns.map(({ name, index, isVisible, isFrozen }) => {
+        this.columns = columns.map(({ name, index, isVisible, isFrozen, ...restProps }) => {
             return {
                 name,
                 index,
@@ -42,7 +42,8 @@ export default class ViewBuilder<Row>
                     this.element.querySelectorAll(`tr > *:nth-child(${this.index + 1})`).forEach((element: HTMLElement) => {
                         element.classList.toggle('hidden')
                     })
-                }
+                },
+                ...restProps,
             }
         })
         this.preset()

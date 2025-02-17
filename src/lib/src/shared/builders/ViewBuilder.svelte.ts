@@ -73,6 +73,7 @@ export default class ViewBuilder<Row>
     private freeze(index: number, left = 0)
     {
         const column = this.table.element.querySelector(`thead th:nth-child(${index + 1})`) as HTMLElement
+        if (!column) return 0;
         const { width } = column.getBoundingClientRect()
 
         this.table.element.querySelectorAll(`tr > *:nth-child(${index + 1})`).forEach((element: HTMLElement) => {
